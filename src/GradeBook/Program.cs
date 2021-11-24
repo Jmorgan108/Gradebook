@@ -3,10 +3,15 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
+    
     class Program
     {
         static void Main(string[] args)
         {
+
+            var book = new Book();
+            book.AddGrade(89.1);
+
             var grades = new List<double>() { 12.7,32.2, 12.9, 1.1 };
             grades.Add(56.1);
 
@@ -18,17 +23,7 @@ namespace GradeBook
             }
             result /= grades.Count;
             Console.WriteLine($"The Average grade is {result:N3}");
-
             //N3 is a formatting element that says we want 3 numbers after a decimal
-
-            if(args.Length > 0)
-            {
-                Console.WriteLine($"Hello, {args[0]}!");
-            } 
-            else
-            {
-                Console.WriteLine("Hi There!");
-            }
         }
     }
 }
